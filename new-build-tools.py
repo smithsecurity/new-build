@@ -13,8 +13,8 @@ subprocess.call(["git", "clone", "https://github.com/EmpireProject/Empire.git"])
 print("Done.")
 
 print("Installing Empire.")
+subprocess.call(["pip", "install", "-r" "Empire/setup/requirements.txt")]
 subprocess.call(["./Empire/setup/install.sh"])
-subprocess.call(["\n"])
 print("Done.")
 
 print("Downloading CrackMapExec.")
@@ -38,4 +38,4 @@ print("Downloading Bloodhound.")
 subprocess.call(["apt-get", "install", "bloodhound", "-y"])
 print("Done.")
 
-print("All done! But you still need to install Empire and CME.)
+print("All done!")
