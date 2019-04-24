@@ -13,7 +13,7 @@ subprocess.call(["git", "clone", "https://github.com/EmpireProject/Empire.git"])
 print("Done.")
 
 print("Installing Empire.")
-subprocess.call(["pip", "install", "-r" "Empire/setup/requirements.txt")]
+subprocess.call(["pip", "install", "-r" "Empire/setup/requirements.txt"])
 subprocess.call(["./Empire/setup/install.sh"])
 print("Done.")
 
