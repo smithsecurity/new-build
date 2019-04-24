@@ -1,8 +1,9 @@
 # Run on a newly built kali machine to quickly download
 # and install the following tools:
 # Empire
-# gobuster
-# terminator
+# CrackMapExec
+# Gobuster
+# Terminator
 # Bloodhound
 
 import subprocess
@@ -13,11 +14,17 @@ print("Done.")
 
 print("Installing Empire.")
 subprocess.call(["./Empire/setup/install.sh"])
+subprocess.call(["\n"])
 print("Done.")
 
-print("Downloading impacket.")
-subprocess.call(["git", "clone", "https://github.com/SecureAuthCorp/impacket.git"])
+print("Downloading CrackMapExec.")
+subprocess.call(["git", "clone", "--recursive", "https://github.com/byt3bl33d3r/CrackMapExec.git"])
 print("Done.")
+print("Installing CrackMapExec")
+subprocess.call(["cd", "CrackMapExec"])
+subprocess.call(["./setup.py", "install"])
+print("Running cme first time setup")
+subprocess.call(["cme"])
 
 print("Downloading gobuster.")
 subprocess.call(["apt-get", "install", "gobuster", "-y"])
@@ -30,3 +37,5 @@ print("Done.")
 print("Downloading Bloodhound.")
 subprocess.call(["apt-get", "install", "bloodhound", "-y"])
 print("Done.")
+
+print("All done! But you still need to install Empire and CME.)
