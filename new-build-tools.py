@@ -5,6 +5,7 @@
 # Gobuster
 # Terminator
 # Bloodhound
+# Idle
 
 import subprocess
 import os
@@ -37,6 +38,10 @@ print("Done.")
 
 print("Downloading Bloodhound.")
 subprocess.call(["apt-get", "install", "bloodhound", "-y"])
+print("Done.")
+
+print("Downloading idle.")
+subprocess.call(["apt-get", "install", "idle", "-y"])
 print("Done.")
 
 print("All done!")
