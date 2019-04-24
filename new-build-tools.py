@@ -7,6 +7,7 @@
 # Bloodhound
 
 import subprocess
+import os
 
 print("Downloading Empire.")
 subprocess.call(["git", "clone", "https://github.com/EmpireProject/Empire.git"])
@@ -21,7 +22,7 @@ print("Downloading CrackMapExec.")
 subprocess.call(["git", "clone", "--recursive", "https://github.com/byt3bl33d3r/CrackMapExec.git"])
 print("Done.")
 print("Installing CrackMapExec")
-subprocess.call(["cd", "CrackMapExec"])
+os.chdir('CrackMapExec/')
 subprocess.call(["./setup.py", "install"])
 print("Running cme first time setup")
 subprocess.call(["cme"])
