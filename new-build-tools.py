@@ -36,7 +36,7 @@ subprocess.call(["git", "clone", "https://github.com/aboul3la/Sublist3r.git"])
 print("Done.")
 
 print("Installing sublist3r.")
-subprocess.call(["pip", "install", "-r" "sublist3r/requirements.txt"])
+subprocess.call(["pip", "install", "-r" "Sublist3r/requirements.txt"])
 print("Done.")
 
 print("Downloading gobuster.")
