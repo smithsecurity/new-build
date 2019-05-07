@@ -1,4 +1,4 @@
- Run on a newly built kali machine to quickly download
+# Run on a newly built kali machine to quickly download
 # and install the following tools:
 # Empire
 # CrackMapExec
