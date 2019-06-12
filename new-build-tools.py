@@ -69,7 +69,7 @@ print("Done")
 
 update = input("Would you like to run updates as well? [Y/N] ")
 
-if update == "Y":
+if update == "Y" or update == "y" or update == "yes":
     print("Ok, running updates.")
     subprocess.call(["apt-get", "update"])
     subprocess.call(["apt-get", "upgrade", "-y"])
