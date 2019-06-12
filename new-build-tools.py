@@ -67,11 +67,14 @@ print("Installing Docker")
 subprocess.call(["apt-get", "install", "docker-ce"])
 print("Done")
 
-update = input("Would you like to run updates as well?", "[Y/N] ")
+update = input("Would you like to run updates as well? [Y/N] ")
 
-if update == "y":
+if update == "Y":
     print("Ok, running updates.")
-    subprocess.call(["apt-get", "update", "&&", "apt-get", "upgrade", "-y", "&&", "apt-get", "dist-upgrade", "-y", "&&", "apt", "autoremove", "-y"])
+    subprocess.call(["apt-get", "update"])
+    subprocess.call(["apt-get", "upgrade", "-y"])
+    subprocess.call(["apt-get", "dist-upgrade", "-y"])
+    subprocess.call(["apt", "autoremove", "-y"])
 
 else:
     pass
